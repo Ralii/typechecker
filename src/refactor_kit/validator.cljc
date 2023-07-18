@@ -3,6 +3,14 @@
    [malli.core :as malli]
    [malli.registry :as mr]))
 
+(def registry*
+  (atom {:string (malli/-string-schema)
+         :maybe (malli/-maybe-schema)
+         :map (malli/-map-schema)}))
+
+(mr/set-default-registry!
+ (mr/mutable-registry registry*))
+
 (defn- illegal-argument
   "Creates an IllegalArgumentException or js/Error."
   [message]
@@ -45,14 +53,6 @@
   (->> args
        (tree-seq seqable? seq)
        (filter map-entry?)))
-
-(def registry*
-  (atom {:string (malli/-string-schema)
-         :maybe (malli/-maybe-schema)
-         :map (malli/-map-schema)}))
-
-(mr/set-default-registry!
- (mr/mutable-registry registry*))
 
 (defn register! [type ?schema]
   (swap! registry* assoc type ?schema))
