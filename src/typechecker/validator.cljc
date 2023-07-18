@@ -1,4 +1,4 @@
-(ns refactor-kit.validator
+(ns typechecker.validator
   (:require
    [malli.core :as malli]
    [malli.registry :as mr]))

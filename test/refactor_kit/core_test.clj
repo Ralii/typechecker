@@ -1,6 +1,6 @@
-(ns refactor-kit.core-test
+(ns typechecker.core-test
   (:require [clojure.test :refer :all]
-            [refactor-kit.core :refer :all]))
+            [typechecker.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

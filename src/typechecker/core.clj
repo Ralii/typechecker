@@ -1,6 +1,6 @@
-(ns refactor-kit.core
+(ns typechecker.core
   (:require
-   [refactor-kit.validator :refer [register! defnvalidated]]))
+   [typechecker.validator :refer [register! defnvalidated]]))
 
 (def dat {:field "string value"
           :tags ["tag" "another tag" "tag"]
