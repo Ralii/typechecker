@@ -18,6 +18,4 @@
   (defnvalidated return-args [args]
     args)
 
-  (return-args dat)
-
-  )
+  (return-args dat))
