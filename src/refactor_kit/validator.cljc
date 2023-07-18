@@ -90,12 +90,6 @@
                                             " | IN FUNCTION NAME: " ~name)))
                     ~@body))))))
 
-(def tt [{:moi "kk"} {:moi "kkk"} {:moi "dd"}])
-
-
-(map (fn [fd] (assoc fd :yes "kee")) tt)
-
-
 (defn- parsed-defn->defn
   "Builds a defn from a parsed defn."
   [{:keys [name meta fdefs]}]
