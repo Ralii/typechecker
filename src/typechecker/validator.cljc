@@ -116,7 +116,7 @@
      :fdefs fdefs}))
 
 (defmacro defnvalidated
-  "Validator function that wraps normal defn
+  "Validator macro that wraps normal defn
    with checker that runs the input params against
    global registry
 
